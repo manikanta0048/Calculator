@@ -1,0 +1,88 @@
+/* General reset for clean starting point */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9; /* Light background */
+}
+
+.calculator-container {
+    background-color: #333; /* Dark calculator body */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+/* Display Screen Styling */
+.display {
+    background-color: #222;
+    color: #fff;
+    font-size: 3em;
+    text-align: right;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures long numbers don't break layout */
+    height: 90px;
+    line-height: 50px;
+}
+
+/* Button Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Number Buttons */
+.number {
+    background-color: #505050;
+    color: #fff;
+}
+
+.number:hover {
+    background-color: #6a6a6a;
+}
+
+/* Zero button spans two columns */
+.zero {
+    grid-column: span 2;
+}
+
+/* Operator Buttons (C, %, /, *, -, +) */
+.operator {
+    background-color: #d1d1d1;
+    color: #000;
+}
+
+.operator:hover {
+    background-color: #e0e0e0;
+}
+
+/* Equals Button */
+.equals {
+    background-color: #ff9500; /* Apple calculator orange */
+    color: #fff;
+}
+
+.equals:hover {
+    background-color: #ffb64d;
+}
